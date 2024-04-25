@@ -86,3 +86,12 @@
     font-size: 22px;
     font-weight: 500;
 }
+.about-talents:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.about-achievement:hover{
+    transform: scale(1.12);
+    transition: 0.5s;
+}

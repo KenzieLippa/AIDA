@@ -16,7 +16,7 @@
     font-weight: 600;
 }
 .hero h1 span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background: linear-gradient(270deg, #ecadbc 10%, #c0289b 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -33,12 +33,12 @@
     gap: 25px;
     font-size: 24px;
     font-weight:500;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .hero-connect{
     padding: 25px 45px;
     border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    background: linear-gradient(264deg, #c0293f 30%, #4ba7ce 86.28%);
     cursor: pointer;
 }
 .hero-thoughts{
@@ -52,5 +52,5 @@
     border: 2px solid white;
 }
 .hero-thoughts:hover{
-    border-color: #B415FF;
+    border-color: #50b064;
 }

@@ -17,12 +17,16 @@
 
 }
 .services-title img{
+    margin-top: 100px;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   
 }
 .services-format{
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,10 +39,11 @@
 }
 
 .services-container{
+    margin-top: 250px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:40px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .services-format h3{
     font-size: 28px;

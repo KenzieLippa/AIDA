@@ -54,18 +54,18 @@ const About
         </div>
         <div className="about-achievements">
             <div className="about-achievement">
-                <h1>10+</h1>
-                <p>YEARS OF EXPERIENCE</p>
+                <h1>180.5 M</h1>
+                <p>ACTIVE USERS</p>
             </div>
             <hr />
             <div className="about-achievement">
-                <h1>90+</h1>
-                <p>PROJECTS COMPLETED</p>
+                <h1>110 M</h1>
+                <p>APP DOWNLOADS</p>
             </div>
             <hr />
             <div className="about-achievement">
-                <h1>15+</h1>
-                <p>HAPPY CLIENTS</p>
+                <h1>1.6 B</h1>
+                <p>MONTHLY WEB VISITS</p>
             </div>
             <hr />
         </div>

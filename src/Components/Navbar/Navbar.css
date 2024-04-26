@@ -13,7 +13,7 @@
     font-size: 20px;
 }
 
-.nav-connect{
+.nav-Login{
     padding: 20px 40px; 
     border-radius: 50px;
     background: linear-gradient(267deg, #c0289b 20.36%, #4ba7ce 102.06%);
@@ -21,6 +21,18 @@
     cursor: pointer;
     transition: 0.5s;
 }
-.nav-connect:hover{
+.nav-Login:hover{
     transform: scale(1.05);
+}
+.services-readmore{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.services-format:hover{
+    border: 2px solid #c0293f;
+    background-image: linear-gradient(45deg, #c0293f, #22539e);
+    transform: scale(1.05);
+    transition: 0.4s;
 }

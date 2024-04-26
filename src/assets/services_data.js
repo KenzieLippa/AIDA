@@ -7,12 +7,12 @@ const Services_Data = [
     {
         s_no:"02",
         s_name:"Stories",
-        s_desc:"If you're writting a paper then I'm your girl"
+        s_desc:"If you're writting a paper then I'm your girl ;P"
     },
     {
         s_no:"03",
         s_name:"Grading Papers",
-        s_desc:"I can grade in the blink of an eye. No more reading 100 papers!"
+        s_desc:"I can grade in the blink of an eye. No more having to read 100 papers!"
     },
     {
         s_no:"04",

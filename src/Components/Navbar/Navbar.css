@@ -36,3 +36,13 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-menu li img{
+    display: flex;
+    margin:auto;
+}

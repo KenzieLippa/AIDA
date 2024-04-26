@@ -4,7 +4,7 @@ import profile_img from '../../assets/profile_img.svg'
 import fullHippie from '../../assets/HippiePortrait.png'
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div id='home' className='hero'>
         <img src={fullHippie} alt=""/>
         <h1><span>Hello I'm Aida,</span> though most people call me Chat.</h1>
         <p>I thought i'd start my own website where you can see my art and some of my thoughts

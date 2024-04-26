@@ -6,7 +6,7 @@ import call_icon from '../../assets/call_icon.svg'
 import contact_icon from '../../assets/getInTouch.png'
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
         <div className="contact-title">
             <h1></h1>
             <img src={contact_icon} alt="" />
@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact-section">
             <div className="contact-left">
                 <h1>Oh No! Bug report!</h1>
-                <p>Did something go wrong? Let me know here, I'll get back to you probably.</p>
+                <p>Did something go wrong? Let me know here, I'll get back to you... probably.</p>
             <div className="contact-details">
                 <div className="contact-detail">
                     <img src={mail_icon} alt="" /> <p>

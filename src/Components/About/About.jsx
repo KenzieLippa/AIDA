@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import theme_patter from '../../assets/AboutMeCircle.png'
-import profile_img from '../../assets/about_profile.svg'
+// import profile_img from '../../assets/about_profile.svg'
 import hippiePortrait from '../../assets/HippiePortrait.png'
 import hippieSquare from '../../assets/HippieSquare.png'
 const About

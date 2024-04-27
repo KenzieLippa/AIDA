@@ -53,7 +53,7 @@
 .nav-mode-close{
     display: none;
 }
-@media (max-width: 768px){
+@media (max-width: 800px){
     .navbar{
         margin:20px 50px;
     }

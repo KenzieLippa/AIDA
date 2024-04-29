@@ -53,11 +53,14 @@
 .nav-mode-close{
     display: none;
 }
+.nav-mode-open{
+    display: none;
+}
 @media (max-width: 800px){
     .navbar{
         margin:20px 50px;
     }
-    .nav-connect{
+    .nav-Login{
         display: none; /*hide the connect with me button*/
 
     }

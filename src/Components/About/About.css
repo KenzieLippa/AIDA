@@ -101,14 +101,18 @@
 }
 @media(max-width:768px){
     .about{
-        gap:80px;
+        gap: 80px;
         margin:50px 70px;
         margin-top: 150px;
         align-items: start;
+        max-width: 650px;
     }
     .about-title img{
         
         margin-left: 250px;
+    }
+    .about-left{
+        margin-left: -100px;
     }
     .about-section{
         
@@ -117,6 +121,19 @@
     .about-para{
         font-size: 18px;
         line-height: 32px;
+        margin-left:-40px;
+       
 
+    }
+    .about-talents{
+        gap: 20px;
+        align-items: center;
+    }
+    .about-talents p{
+        font-size: 20px;
+
+    }
+    .about-talents hr{
+        height: 6px;
     }
 }

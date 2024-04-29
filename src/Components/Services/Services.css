@@ -63,3 +63,36 @@
     line-height: 40px;
     max-width: 300px;
 }
+@media(max-width:800px){
+    .services{
+        align-items: start;
+        gap: 70px;
+        margin: 20px 70px;
+       
+    }
+    .services-title img{
+        margin-left: 300px;
+    }
+   .services-format{
+        gap:20px;
+        padding: 32px;
+       
+
+    }
+    .services-format h2{
+        font-size: 28px;
+    }
+    .services-format p{
+        font-size: 18px;
+        line-height: 32px;
+        max-width: 300px;
+    }
+    .services-readmore img{
+        width: 20px;
+    }
+    .services-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px
+    }
+
+}

@@ -61,7 +61,8 @@
         margin:20px 50px;
     }
     .nav-Login{
-        display: none; /*hide the connect with me button*/
+         /*hide the connect with me button*/
+         margin-left: 50px;
 
     }
     .nav-mode-open{

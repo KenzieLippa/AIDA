@@ -29,8 +29,8 @@ const Navbar = ({setShowLogin}) => {
         <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={()=>setMenu("services")}>Services</p></AnchorLink>{menu==="services"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#work'><p onClick={()=>setMenu("work")}>Portfolio</p></AnchorLink>{menu==="work"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact"?<img src={underline} alt =''/>:<></>}</li>
+        <div onClick={()=>{setShowLogin(true); closeMenu();}} className="nav-Login">Log In/Sign Up</div>
      </ul>
-     <div onClick={()=>{setShowLogin(true)}} className="nav-Login">Log In/Sign Up</div>
     </div>
 
   )

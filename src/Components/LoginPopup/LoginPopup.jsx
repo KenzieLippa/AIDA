@@ -5,7 +5,7 @@ import axios from 'axios'
 import  {SiteContext}  from '../../Context/SiteContext'
 const LoginPopup = ({setShowLogin}) => {
 
-    const [currState,setCurr] = useState("Sign Up")
+    const [currState,setCurr] = useState("Login")
     const [data,setData] = useState({
         name:"",
         email:"",
@@ -60,11 +60,11 @@ const LoginPopup = ({setShowLogin}) => {
                 <button type='submit'>
                     {currState==="Sign Up"?"Create Acount" : "Login"}
                 </button>
-                <div className="login-popup-condition">
+               {currState === "Login"?<></>: <div className="login-popup-condition">
                     <input type="checkbox" required/>
                     <p>By continuing I agree to sell my soul to what ever dark entity is waiting to steal data from this site</p>
 
-                </div>
+                </div>}
            
                 {currState === "Login"?
                 <p>Create a new account <span onClick={()=>{setCurr("Sign Up")}}>Click here</span></p>:

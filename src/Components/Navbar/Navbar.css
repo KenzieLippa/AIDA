@@ -91,6 +91,9 @@
 .nav-profile-dropdown img{
     width: 20px;
 }
+.nav-profile-dropdown li:hover{
+    color:#c0289b;
+}
 @media (max-width: 800px){
     .navbar{
         margin:20px 50px;

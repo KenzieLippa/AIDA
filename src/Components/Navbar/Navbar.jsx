@@ -1,13 +1,17 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import './Navbar.css'
 import logo from '../../assets/AidaCircle.png'
 import underline from '../../assets/swirl.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
+import { SiteContext } from '../../Context/SiteContext'
+import profile from '../../assets/profile_icon.png'
+import logout from '../../assets/logout_icon.png'
 
 const Navbar = ({setShowLogin}) => {
   const [menu,setMenu] = useState("home");
+  const {token, setToken} = useContext(SiteContext);
   const menuRef = useRef();
 
   const openMenu = () =>{
@@ -29,7 +33,15 @@ const Navbar = ({setShowLogin}) => {
         <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={()=>setMenu("services")}>Services</p></AnchorLink>{menu==="services"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#work'><p onClick={()=>setMenu("work")}>Portfolio</p></AnchorLink>{menu==="work"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact"?<img src={underline} alt =''/>:<></>}</li>
-        <div onClick={()=>{setShowLogin(true); closeMenu();}} className="nav-Login">Log In/Sign Up</div>
+        {!token?  <div onClick={()=>{setShowLogin(true); closeMenu();}} className="nav-Login">Log In/Sign Up</div>:<div className='navbar-profile'>
+          <img src={profile} alt=""/>
+          <ul className="nav-profile-dropdown">
+            {/* <li><img src="" alt="" /></li>
+            <hr /> */}
+            <li><img src={logout} alt="" /><p>Log Out</p></li>
+          </ul>
+          </div>}
+       
      </ul>
     </div>
 

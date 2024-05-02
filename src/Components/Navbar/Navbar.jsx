@@ -8,7 +8,7 @@ import menu_close from '../../assets/menu_close.svg'
 import { SiteContext } from '../../Context/SiteContext'
 import profile from '../../assets/profile_icon.png'
 import logout_img from '../../assets/logout_icon.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Navbar = ({setShowLogin}) => {
   const [menu,setMenu] = useState("home");
@@ -36,10 +36,11 @@ const Navbar = ({setShowLogin}) => {
      <ul ref={menuRef}  className="nav-menu">
       {/* check state after p tag */}
       <img src={menu_close} onClick={closeMenu} alt="" className="nav-mode-close" />
-        <li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt =''/>:<></>}</li>
+        <Link to='/'><li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt =''/>:<></>}</li></Link>
         <li><AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={()=>setMenu("about")}>About Me</p></AnchorLink>{menu==="about"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={()=>setMenu("services")}>Services</p></AnchorLink>{menu==="services"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#work'><p onClick={()=>setMenu("work")}>Portfolio</p></AnchorLink>{menu==="work"?<img src={underline} alt =''/>:<></>}</li>
+        <li><p onClick={()=>setMenu("chat")}>Chat</p>{menu==="chat"?<img src={underline} alt =''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact"?<img src={underline} alt =''/>:<></>}</li>
         {!token?  <div onClick={()=>{setShowLogin(true); closeMenu();}} className="nav-Login">Log In</div>:<div className='navbar-profile'>
           <img src={profile} alt=""/>

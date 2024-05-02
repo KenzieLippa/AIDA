@@ -1,9 +1,9 @@
 import React from 'react'
-import './gpt.css'
-const gpt = () => {
+import './Chat.css'
+const Chat = () => {
   return (
     <div>gpt</div>
   )
 }
 
-export default gpt
+export default Chat

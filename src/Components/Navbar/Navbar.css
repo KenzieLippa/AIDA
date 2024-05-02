@@ -135,4 +135,49 @@
         flex-direction: row;
         gap: 20px;
     }
+    .navbar-profile{
+        width: 100%;
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        position:relative;
+    }
+    .nav-profile-dropdown{
+        display: none;
+        position: absolute;
+        top:100%;
+        left:50%;
+        transform: translateX(-50%);
+       
+        z-index: 1;
+        width:200px;
+       
+    }
+    .nav-profile-dropdown li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+        gap: 10px;
+        cursor: pointer;
+        /* margin-right: 400px; */
+    
+    }
+    .navbar-profile:hover .nav-profile-dropdown{
+        display: flex;
+        align-items: start;
+        /* margin-left: -100px; */
+        flex-direction: column;
+        gap: 10px;
+        background: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        border:none;
+        outline:none;
+        list-style: none;
+        /* margin-right: -150px; */
+        width:100%
+    }
+    
 }

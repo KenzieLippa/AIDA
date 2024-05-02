@@ -39,7 +39,12 @@
     padding: 25px 45px;
     border-radius: 50px;
     background: linear-gradient(264deg, #c0293f 30%, #4ba7ce 86.28%);
+    
     cursor: pointer;
+}
+.hero-text{
+    text-decoration: none;
+    color: white;
 }
 .hero-thoughts{
     padding: 25px 75px;

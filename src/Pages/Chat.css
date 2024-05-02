@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /*Rem to pixels i think so doing a 10 ratio instead of 16*/
+
+}
+body{
+    background: #6137c4;
+    color:white;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

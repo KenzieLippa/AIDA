@@ -2,6 +2,7 @@ import React from 'react'
 import './Hero.css'
 import profile_img from '../../assets/profile_img.svg'
 import fullHippie from '../../assets/HippiePortrait.png'
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <div id='home' className='hero'>
@@ -12,9 +13,9 @@ const Hero = () => {
         </p>
         <div className="hero-action">
             <div className="hero-connect">
-                Chat with me!
+              <Link to='/chat' className='hero-text'>  Chat with me!</Link>
             </div>
-            <div className="hero-thoughts">My thoughts</div>
+            {/* <div className="hero-thoughts">My thoughts</div> */}
         </div>
     </div>
 

@@ -36,12 +36,12 @@ const Navbar = ({setShowLogin}) => {
      <ul ref={menuRef}  className="nav-menu">
       {/* check state after p tag */}
       <img src={menu_close} onClick={closeMenu} alt="" className="nav-mode-close" />
-        <Link to='/'><li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt =''/>:<></>}</li></Link>
-        <li><AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={()=>setMenu("about")}>About Me</p></AnchorLink>{menu==="about"?<img src={underline} alt =''/>:<></>}</li>
-        <li><AnchorLink className='anchor-link' offset={50} href='#services'><p onClick={()=>setMenu("services")}>Services</p></AnchorLink>{menu==="services"?<img src={underline} alt =''/>:<></>}</li>
-        <li><AnchorLink className='anchor-link' offset={50} href='#work'><p onClick={()=>setMenu("work")}>Portfolio</p></AnchorLink>{menu==="work"?<img src={underline} alt =''/>:<></>}</li>
-        <li><p onClick={()=>setMenu("chat")}>Chat</p>{menu==="chat"?<img src={underline} alt =''/>:<></>}</li>
-        <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact"?<img src={underline} alt =''/>:<></>}</li>
+        <li><Link to='/' className='anchor-link'><p onClick={()=>setMenu("home")}>Home</p>{menu==="home"?<img src={underline} alt =''/>:<></>}</Link></li>
+        <li><Link to='/about' className='anchor-link'><p onClick={()=>setMenu("about")}>About Me</p>{menu==="about"?<img src={underline} alt =''/>:<></>}</Link></li>
+        <li><Link to='/services' className='anchor-link'><p onClick={()=>setMenu("services")}>Services</p>{menu==="services"?<img src={underline} alt =''/>:<></>}</Link></li>
+        <li><Link to='/mywork' className='anchor-link'><p onClick={()=>setMenu("work")}>Portfolio</p>{menu==="work"?<img src={underline} alt =''/>:<></>}</Link></li>
+        <li><Link to='/chat' className='anchor-link'><p onClick={()=>setMenu("chat")}>Chat</p>{menu==="chat"?<img src={underline} alt =''/>:<></>}</Link></li>
+        <li><Link to='/contact' className='anchor-link'><p onClick={()=>setMenu("contact")}>Contact</p>{menu==="contact"?<img src={underline} alt =''/>:<></>}</Link></li>
         {!token?  <div onClick={()=>{setShowLogin(true); closeMenu();}} className="nav-Login">Log In</div>:<div className='navbar-profile'>
           <img src={profile} alt=""/>
           <ul className="nav-profile-dropdown">

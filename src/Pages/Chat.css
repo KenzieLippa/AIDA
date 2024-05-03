@@ -30,4 +30,62 @@
 
 .upper-side{
     padding: 2rem;
+    border-bottom:  3px solid rgb(255, 203, 254);
+    height: 70%;
+}
+.upper-side-image{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.addBtn{
+    height:2rem;
+    padding-right: 1rem;
+}
+.newChat{
+    background: linear-gradient(267deg, #c0289b 20.36%, #4ba7ce 102.06%);
+    border: none;
+    color:white;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family:  "Gloria Hallelujah", cursive;
+    width:25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.newChat:hover{
+    transform: scale(1.05);
+    
+}
+.chat{
+    display: flex;
+    align-items: start;
+    justify-content:start;
+    background: transparent;
+    color:white;
+    padding: 1.5rem;
+    width: 25rem;
+    margin:1rem auto;
+    
+    border-radius: 15px;
+    border: 1px solid rgb(255, 203, 254);
+    transition: 0.5s;
+}
+.chat:hover{
+    transform: scale(1.05);
+}
+.chat-title{
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+}
+.chat>img{
+    margin-right: 3rem;
+    object-fit: cover;
+    height: 1.75rem;
 }

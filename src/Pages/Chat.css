@@ -6,7 +6,7 @@
     font-size: 62.5%;
     background: linear-gradient(360deg, #22539e, #161513 80%);
     color:white;
-    font-family: "Gloria Hallelujah", cursive;
+    /* font-family: "Gloria Hallelujah", cursive; */
     font-weight: 400;
     font-style: normal;
     min-height: 100vh;
@@ -23,6 +23,9 @@
 }
 .logo{
     margin-right: 1rem;
+    object-fit: cover;
+    width: 8.5rem;
+    /* margin-right:2rem; */
 }
 .brand{
     font-size: 2rem;
@@ -48,7 +51,7 @@
     color:white;
     padding: 1.5rem;
     font-size: 1.5rem;
-    font-family:  "Gloria Hallelujah", cursive;
+    /* font-family:  "Gloria Hallelujah", cursive; */
     width:25rem;
     display: flex;
     align-items: center;
@@ -83,9 +86,102 @@
     align-items: center;
     justify-content: center;
     margin-top: 7px;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
 }
 .chat>img{
     margin-right: 3rem;
     object-fit: cover;
     height: 1.75rem;
+}
+.lower-side{
+    padding:2rem;
+}
+.list-items{
+    margin: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.list-items-img{
+    margin: 1rem;
+    padding-right: 2rem;
+}
+/* allows you to grab a specific element and adjust the margin slightly */
+.list-items:nth-child(1)>.listItemsImg {
+    margin-right: 0.5rem;
+}
+.main{
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 10rem;
+    margin-bottom: 0;
+}
+.main-chats{
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 70rem;
+    height: calc(100vh - 17rem);
+}
+.main-chats-chat{
+    margin: 1rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    text-align: justify;
+}
+.chat-img{
+    object-fit: cover;
+    width: 3.5rem;
+    margin-right:2rem;
+    border-radius: 0.5rem;
+}
+.bot{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.chat-footer{
+   margin-top: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.user-input{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(28,30,58,1);
+    border-radius: 0.5rem;
+    width: 60rem;
+}
+.user-input input{
+    width: calc(100% - 3rem);
+    outline: none;
+    padding: 1.25rem;
+    color: white;
+}
+.user-input>input, .send{
+
+    background: transparent;
+    border:none;
+}
+.chat-footer>p{
+    margin: 1.75rem 0;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
 }

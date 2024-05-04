@@ -15,7 +15,9 @@ const MyWork = () => {
                 return <img key={index} src={work.w_img} alt=""/>
             })}
         </div>
-        <div className="mywork-showmore">
+        <div className="mywork-showmore" onClick={()=>{
+            window.open('https://www.instagram.com/roseyart13/', '_blank');
+        }}>
             <p>Show More</p>
             <img src={arrow_icon} alt="" />
         </div>

@@ -45,7 +45,30 @@ useEffect(()=>{
   }
 
   const handleEnter = async(e)=>{
-    if(e.key=='Enter') await handleSend();
+    if(e.key==='Enter') await handleSend();
+  }
+  const handleQuery = async(e)=>{
+    const text = e.target.value;
+    console.log("Query text:", text); // This will show what text is being sent
+
+    if (!text) {
+        console.error('No text to send to API');
+        return; // Add a return to stop executing if text is not valid
+    }
+    //clear the input
+    setMessages([
+      ...messages,
+      {text, isBot:false}
+    ])
+    //wait for response to come
+    const res = await sendMsgToOpenAI(text);
+    console.log(res);
+    //append all previous messages and then add the new ones
+    setMessages([...messages, 
+      {text: text, isBot: false},
+      {text: res, isBot: true}
+    ])
+  
   }
   return (
     <div className='GPT'>
@@ -53,14 +76,14 @@ useEffect(()=>{
         <div className="upper-side">
           <div className="upper-side-image"><img src={aida} alt="Aida" className='logo'/> <span className='brand'>AIDA</span></div>
            
-            <button className="newChat">
+            <button className="newChat" onClick={()=>{window.location.reload()}}>
               <img src={addBtn} alt="" className="addBtn" />New Chat
             </button>
             <div className="chat-logs">
-              <button className="chat">
+              <button className="chat"  value="What is the meaning of life?" onClick={handleQuery}>
                 <img src={msgIcon} alt="chat" className="chat-image" /> <p className="chat-title"> What is the meaning of life?</p>
               </button>
-              <button className="chat">
+              <button className="chat" value="The beauty of the greek language" onClick={handleQuery} >
                 <img src={msgIcon} alt="chat" className="chat-image" /><p className="chat-title">The beauty of the greek language</p>
               </button>
             

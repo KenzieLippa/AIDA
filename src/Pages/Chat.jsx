@@ -10,9 +10,11 @@ import sendBtn from '../assets/send.svg'
 import userIcon from '../assets/profile_icon.png'
 import aidaIcon from '../assets/HippiePortrait.png'
 import { sendMsgToOpenAI } from "./openai";
+import { SiteContext } from '../Context/SiteContext'
+
 const Chat = () => {
   const msgEnd = useRef(null);
-  
+  const {token} = useContext(SiteContext)
   const [input, setInput] = useState(""); //set name hook
   const [messages, setMessages] = useState([{
     //for every object carry text which is message and a boolean to see if bot or not
@@ -23,9 +25,30 @@ const Chat = () => {
 
 useEffect(()=>{
   //every time the message is changed run this and auto scroll
+  fetchMessages();
   msgEnd.current.scrollIntoView();
+
+},[messages])
+const fetchMessages = async()=>{
+  try{
+    const res = await fetch('/messages', {
+      headers:{
+        'Authorization': `Bearer ${token}`
+      }
+
+    });
+    if(!res.ok){
+      console.error('STUPID DATA')
+      console.log(await res.text());
+      return
+    }
+    const data = await res.json();
+    setMessages(data.messages);
+  }catch(error){
+    console.error('ERrror fetching messages', error);
+  }
 }
-,[messages])
+
   const handleSend = async()=>{
     const text = input;
     //clear the input

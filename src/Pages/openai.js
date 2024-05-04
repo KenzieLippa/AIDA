@@ -14,7 +14,7 @@ function generateFullPrompt(message){
 export async function sendMsgToOpenAI(message){
     const fullPrompt = generateFullPrompt(message);
     const res = await openai.chat.completions.create({
-        model:"gpt-4",
+        model:"gpt-4-turbo-2024-04-09",
         messages: [
             {
               "role": "system",
@@ -58,7 +58,7 @@ export async function sendMsgToOpenAI(message){
             }
           ],
         temperature: 0.7,
-        max_tokens: 150,
+        // max_tokens: 150,
         top_p: 1,
         // frequency_penalty:0,
         // presense_penalty:0,

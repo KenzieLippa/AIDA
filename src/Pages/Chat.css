@@ -10,6 +10,7 @@
     font-weight: 400;
     font-style: normal;
     min-height: 100vh;
+    min-width: 200vh;
     display: flex;
 
 }
@@ -123,7 +124,7 @@
 }
 .main-chats{
     overflow: hidden;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     scroll-behavior: smooth;
     width: 100%;
     max-width: 70rem;

@@ -54,7 +54,7 @@ export async function sendMsgToOpenAI(message){
             },
             {
                 "role":"user",
-                "content": fullPrompt
+                "content": message
             }
           ],
         temperature: 0.7,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState, useRef, useContext } from 'react'
 import './Chat.css'
 import aida from '../assets/HippiePortrait.png'
@@ -11,13 +11,37 @@ import userIcon from '../assets/profile_icon.png'
 import aidaIcon from '../assets/HippiePortrait.png'
 import { sendMsgToOpenAI } from "./openai";
 const Chat = () => {
-
-
+  const msgEnd = useRef(null);
+  
   const [input, setInput] = useState(""); //set name hook
+  const [messages, setMessages] = useState([{
+    //for every object carry text which is message and a boolean to see if bot or not
+    text: "Hey, I'm Aida.",
+    isBot: true,
+  },
+]);
+
+useEffect(()=>{
+  //every time the message is changed run this and auto scroll
+  msgEnd.current.scrollIntoView();
+}
+,[messages])
   const handleSend = async()=>{
+    const text = input;
+    //clear the input
+    setInput('');
+    setMessages([
+      ...messages,
+      {text, isBot:false}
+    ])
     //wait for response to come
-    const res = await sendMsgToOpenAI(input);
+    const res = await sendMsgToOpenAI(text);
     console.log(res);
+    //append all previous messages and then add the new ones
+    setMessages([...messages, 
+      {text: text, isBot: false},
+      {text: res, isBot: true}
+    ])
   }
   return (
     <div className='GPT'>
@@ -46,7 +70,7 @@ const Chat = () => {
       </div>
       <div className="main">
         <div className="main-chats">
-          <div className="main-chats-chat">
+          {/* <div className="main-chats-chat">
             <img className='chat-img' src={userIcon} alt="" />
             <p className="txt">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum aliquam laboriosam tenetur quibusdam, id possimus nisi ex quidem sint rerum!
@@ -57,12 +81,21 @@ const Chat = () => {
             <p className="aida-txt">
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illo eveniet, exercitationem sapiente, totam natus id aspernatur explicabo rerum nulla vel vitae odit sed eligendi mollitia quos eius eum! Aspernatur quam odio debitis minima nam eum, consequatur provident animi dignissimos quae molestias adipisci. Magnam totam beatae aperiam sed deserunt sint! At eius dolore delectus temporibus! Aut, ullam. Nulla vero quasi dignissimos libero ea, amet porro nemo repellendus maiores deleniti a sequi eaque, labore odit adipisci corporis vitae soluta rem facilis doloribus, eum delectus? Deleniti corrupti vero quibusdam porro? Vitae quae amet perspiciatis accusamus, ea eos illum distinctio architecto delectus nemo.
             </p>
+          </div> */}
+          {messages.map((message, i)=>
+             <div key={i} className={message.isBot? "main-chats-chat bot":"main-chats-chat"}>
+            <img className='chat-img' src={message.isBot? aidaIcon:userIcon} alt="" />
+            <p className="aida-txt">
+             {message.text}
+            </p>
           </div>
+          )}
+          <div ref={msgEnd}/>
         </div>
        
           <div className="chat-footer">
             <div className="user-input">
-              <input type="text" placeholder ='Send a message' value={input} onSubmit={(e)=>{setInput(e.target.value)}}/> <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" /></button>
+              <input type="text" placeholder ='Send a message' value={input} onChange={(e)=>{setInput(e.target.value)}}/> <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" /></button>
             </div>
             <p>Disclaimer: I might have been hacked by a dastardly student. She may have schemed to get laughs. My information could be false</p>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useRef, useContext } from 'react'
 import './Chat.css'
 import aida from '../assets/HippiePortrait.png'
 import addBtn from '../assets/add-30.png'
@@ -8,8 +9,16 @@ import saved from '../assets/bookmark.svg'
 import sendBtn from '../assets/send.svg'
 import userIcon from '../assets/profile_icon.png'
 import aidaIcon from '../assets/HippiePortrait.png'
-
+import { sendMsgToOpenAI } from "./openai";
 const Chat = () => {
+
+
+  const [input, setInput] = useState(""); //set name hook
+  const handleSend = async()=>{
+    //wait for response to come
+    const res = await sendMsgToOpenAI(input);
+    console.log(res);
+  }
   return (
     <div className='GPT'>
       <div className="sidebar">
@@ -53,7 +62,7 @@ const Chat = () => {
        
           <div className="chat-footer">
             <div className="user-input">
-              <input type="text" placeholder ='Send a message' /> <button className="send"><img src={sendBtn} alt="Send" /></button>
+              <input type="text" placeholder ='Send a message' value={input} onSubmit={(e)=>{setInput(e.target.value)}}/> <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" /></button>
             </div>
             <p>Disclaimer: I might have been hacked by a dastardly student. She may have schemed to get laughs. My information could be false</p>
           </div>

@@ -1,3 +1,30 @@
+.GPT{
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.GPT::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+}
+.GPT::-webkit-scrollbar-track{
+    background: transparent;
+}
+.GPT::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+.GPT::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+/* *{
+    overflow: hidden;
+} */
+/* *:hover{
+    overflow: auto;
+} */
 
 .GPT{
     margin: 0;
@@ -12,7 +39,7 @@
     min-height: 100vh;
     min-width: 200vh;
     display: flex;
-
+    
 }
 
 .sidebar{

@@ -43,6 +43,10 @@ useEffect(()=>{
       {text: res, isBot: true}
     ])
   }
+
+  const handleEnter = async(e)=>{
+    if(e.key=='Enter') await handleSend();
+  }
   return (
     <div className='GPT'>
       <div className="sidebar">
@@ -95,7 +99,7 @@ useEffect(()=>{
        
           <div className="chat-footer">
             <div className="user-input">
-              <input type="text" placeholder ='Send a message' value={input} onChange={(e)=>{setInput(e.target.value)}}/> <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" /></button>
+              <input type="text" placeholder ='Send a message' value={input} onKeyDown={handleEnter} onChange={(e)=>{setInput(e.target.value)}}/> <button className="send" onClick={handleSend}><img src={sendBtn} alt="Send" /></button>
             </div>
             <p>Disclaimer: I might have been hacked by a dastardly student. She may have schemed to get laughs. My information could be false</p>
           </div>

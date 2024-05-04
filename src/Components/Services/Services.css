@@ -63,6 +63,10 @@
     line-height: 40px;
     max-width: 300px;
 }
+.services-link{
+    text-decoration: none;
+    color: white;
+}
 @media(max-width:800px){
     .services{
         align-items: start;

@@ -45,7 +45,7 @@
 .login-popup-input input{
     outline: none;
     border: 1px solid #2a2a2a;
-    background-color: #32323c;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 4px;
 }
@@ -66,6 +66,7 @@
 }
 .login-popup-condition input{
     margin-top: 5px;
+    color: white;
 }
 .login-popup p span{
     background: linear-gradient(270deg, #ecadbc 10%, #c0289b 100%);

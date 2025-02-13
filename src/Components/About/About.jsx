@@ -34,7 +34,7 @@ const About
                         </p><hr style={{width:"70%"}}></hr>
                         </div>
                         <div className="about-talents"><p>
-                        Tripping
+                        Coding
                         </p><hr style={{width:"90%"}}></hr>
                         </div>
                         <div className="about-talents"><p>
@@ -42,11 +42,11 @@ const About
                         </p><hr style={{width:"50%"}}></hr>
                         </div>
                         <div className="about-talents"><p>
-                        Romancing
+                        Logic
                         </p><hr style={{width:"100%"}}></hr>
                         </div>
                         <div className="about-talents"><p>
-                        Tolerance
+                        Reasoning
                         </p><hr style={{width:"90%"}}></hr>
                         </div>
                 </div>
